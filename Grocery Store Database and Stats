@@ -1,1 +1,34 @@
+//Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.//
 
+CREATE TABLE Clothes_n_Things
+(id INTEGER PRIMARY KEY, item TEXT, price NUMERIC, date_last_ordered TEXT, current_inventory INTEGER);
+
+INSERT INTO Clothes_n_Things
+(id, item, price, date_last_ordered, current_inventory)
+VALUES
+(1, "questionable-quality flip flops", 5.55, "3/3/23", 8),
+(2, "cut-off  jean shorts, light wash", 12.20, "3/24/23", 7),
+(3, "cut-off jean shorts, med. wash", 12.25, "3/24/23", 6),
+(4, "cut-off jean shorts, extra distressed", 13.10, "3/25/23", 8),
+(5, "cropped sweaters", 14.45, 3/30/23, 10),
+(6, "fight or flight penguin graphic tee", 10.25, "3/25/23", 2),
+(7, "decorative but realistic fire extinguisher", 125.99, "10/2/06", 42),
+(8, "khaki chinos", 18.50, "3/25/23", 10),
+(9, "polos w/ regular collar", 12.00, "3/20/23", 10),
+(10, "polo, collars pre-popped", 12.55, "3/27/23", 15),
+(11, "jean jacket, lightly distressed", 22.10, "3/15/23", 5),
+(12, "jean jacket, regular distressed", 23.15, "3/20/23", 8),
+(13, "jean jacket, in need of intervetion", 27.25, "2/16/23", 20),
+(14, "just a sweater", 21.50, "3/30/23", 5),
+(15, "not like the other sweaters, sweater", 25.20, "2/28/23", 11);
+
+SELECT * FROM Clothes_n_Things;
+
+SELECT * FROM CLothes_n_Things
+ORDER BY price DESC
+LIMIT 5;
+
+SELECT item, current_inventory FROM Clothes_n_Things
+ORDER BY current_inventory;
+
+SELECT item, MAX(price) FROM Clothes_n_Things;
